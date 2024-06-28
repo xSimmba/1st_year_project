@@ -1,12 +1,9 @@
 
-Make migrate:
-	python manage.py migrate
+migrate:
+	docker compose run -it web poetry run python manage.py migrate
 
-Make migrations:
-	python manage.py makemigrations
+migrations:
+	docker compose run -it web poetry run python manage.py makemigrations
 
-Make runserver:
-	python manage.py runserver
-
-Make run: migrate migrations
-	docker-compose up --build
+runserver: migrations migrate
+	docker compose run -it -p 8000:8000 web
