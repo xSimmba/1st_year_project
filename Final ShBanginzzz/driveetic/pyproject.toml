@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "final year 1 project"
+version = "0.1.0"
+description = ":7"
+authors = ["luka"]
+license = "MIt"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.6"
+pillow = "^10.3.0"
+easy-thumbnails = "^2.8.5"
+djangorestframework = "^3.15.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

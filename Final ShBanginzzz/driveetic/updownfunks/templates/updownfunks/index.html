@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> 🔑login🔓 or signup📝 to use Drive Files</h2>
+<ul>
+    {% for file in files %}
+    <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

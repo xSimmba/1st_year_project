@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="drive-dashboard">
+  <h2>Dashboard</h2>
+
+  <h3>Folder List</h3>
+    <a href="{% url 'create_folder' %}" class="btn btn-primary">🆕</a>
+    
+      {% if folder_list %}
+        <a href="{% url 'upload_folder' folder_list.0.pk %}" class="upload-link">➕</a>
+      {% else %}
+      {% endif %}
+  <ul>
+    {% for folder in folder_list %}
+      <li>
+        {{ folder.name }}
+        <a href="{% url 'folder_detail' folder.pk %}" class="openFolder">Open_Folder</a>
+        <a href="{% url 'download_folder' folder.pk %}" class="btn btn-success">📩</a>
+        <a href="{% url 'delete_folder' folder.pk %}" class="btn btn-danger">❌</a>
+      </li>
+      {% empty %}
+      <li>No folders found.</li>
+      {% endfor %}
+  </ul>
+    
+  <h3>File List</h3>
+  <ul>
+    {% for file in files_list %}
+      {% if file.is_orphan %}
+        <li>
+          {{ file.name }} 
+          <a href="{% url 'file_download' file.pk %}">📩</a>
+          <a href="{% url 'file_delete' file.pk %}">❌</a>
+          <!-- <select name="move_to_folder" id="move_to_folder_{{ file.pk }}">
+            <option value="">Select a folder</option>
+            {% for folder in folder_list %}
+              <option value="{{ folder.pk }}">{{ folder.name }}</option>
+            {% endfor %}
+          </select>
+          <button type="submit" formaction="{% url 'move_file' file.pk %}">Move</button> -->
+        </li>
+      {% endif %}
+    {% empty %}
+      <li>No files found.</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'file_upload' %}" class="upload-link">➕</a>
+</div>
+{% endblock %}

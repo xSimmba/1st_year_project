@@ -1,0 +1,449 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image:url('/static/image3.jpg');
+    background-size:contain;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+  
+    }
+  
+  header {
+    background-color: #33333300;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 16px;
+    text-shadow:
+      0 0 10px #5c66eefb, /* white glow */
+      0 0 20px #69aaff, /* pink neon */
+      0 0 30px #371fc2; /* pink neon */
+    color: #639daf; /* dark background color */
+  }
+
+
+li {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5c66eefb, /* white glow */
+    0 0 20px #69aaff, /* pink neon */
+    0 0 30px #371fc2; /* pink neon */
+  color: #639daf; /* dark background color */
+}
+
+  h1 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 48px;
+    text-shadow:
+      0 0 10px #5c66eefb, /* white glow */
+      0 0 20px #69aaff, /* pink neon */
+      0 0 30px #371fc2; /* pink neon */
+    color: #639daf; /* dark background color */
+    margin-bottom: 10px;
+    animation: pulse 4s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  h2 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 48px;
+    text-shadow:
+      0 0 10px #5c33a8fb, /* white glow */
+      0 0 20px #9f3de0, /* pink neon */
+      0 0 30px #371fc2; /* pink neon */
+    color: #639daf; /* dark background color */
+    margin-bottom: 10px;
+  } 
+  h3 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 32px;
+    text-shadow:
+      0 0 10px #5c66eefb, /* white glow */
+      0 0 20px #69aaff, /* pink neon */
+      0 0 30px #371fc2; /* pink neon */
+    color: #639daf; /* dark background color */
+    margin-bottom: 10px;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 32px;
+    text-shadow:
+      0 0 10px #5c66eefb, /* white glow */
+      0 0 20px #69aaff, /* pink neon */
+      0 0 30px #371fc2; /* pink neon */
+    color: #639daf; /* dark background color */
+    
+  }
+  
+  nav a:hover {
+    text-shadow:
+    0 0 10px #5cee74a9, /* white glow */
+    0 0 20px #69ff69, /* pink neon */
+    0 0 30px #1a860b; /* pink neon */
+    color: #639daf; /* dark background color */
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    
+  }
+  
+/* Drive Dashboard Styles */
+
+.drive-dashboard {
+  width: 100vw; /* set width to 100% of the viewport width */
+  margin: auto; /* keep the margin for vertical spacing */
+  padding: 20px;
+  background-color: #33333300; /* match the header background color */
+  border: 1px solid #639daf; /* match the dark background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: none; /* remove the max-width constraint */
+}
+
+.drive-dashboard h2 {
+  font-family: 'VCR OSD Mono', monospace; /* match the font family */
+  font-size: 48px; /* adjust the font size */
+  margin-top: 0;
+  text-shadow:
+    0 0 10px hsla(236, 81%, 65%, 0.984), /* white glow */
+    0 0 20px #69aaff, /* pink neon */
+    0 0 30px #371fc2; /* pink neon */
+  color: #639daf; /* dark background color */
+  text-align: center; /* center the h2 text */
+  
+}
+
+.drive-dashboard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #4d4d4d46; /* match the header background color */
+  border-radius: 10px;
+}
+
+.drive-dashboard li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #639daf; /* match the dark background color */
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #fffffffb, /* white glow */
+    0 0 20px #b5c0ce, /* pink neon */
+    0 0 30px #6f6d7c; /* pink neon */
+  color: #ffffff; /* dark background color */
+  display: flex; /* add this to make the list item a flex container */
+  justify-content: space-evenly; /* add this to space out the text and the link */
+}
+
+.drive-dashboard li:last-child {
+  border-bottom: none;
+}
+
+
+
+.drive-dashboard a {
+  font-family: 'VCR OSD Mono', monospace; /* match the font family */
+  font-size: 16px; /* adjust the font size */
+  text-shadow:
+  0 0 10px #5c66eefb, /* white glow */
+  0 0 20px #69aaff, /* pink neon */
+  0 0 30px #371fc2; /* pink neon */
+  color: #639daf;
+  text-decoration: none;
+}
+
+.drive-dashboard a:hover {
+  text-shadow:
+    0 0 10px #eedf5cfb, /* white glow */
+    0 0 20px #f1d012, /* pink neon */
+    0 0 30px #a88f00; /* pink neon */
+  color: #639daf;
+}
+
+.drive-dashboard .openFolder {
+  
+  cursor: pointer; /* change the cursor to a pointer on hover */
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5c66eefb, /* white glow */
+    0 0 20px #69aaff, /* pink neon */
+    0 0 30px #371fc2; /* pink neon */
+  color: #639daf; /* dark background color */
+}
+
+.drive-dashboard a.openFolder:hover {
+  
+  cursor: pointer; /* change the cursor to a pointer on hover */
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5cee74a9, /* white glow */
+    0 0 20px #69ff69, /* pink neon */
+    0 0 30px #1a860b; /* pink neon */
+  color: #639daf; /* dark background color */
+}
+.drive-dashboard.upload-link {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #639daf; /* match the dark background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.drive-dashboard.upload-link:hover {
+  background-color: #3ec050b6;
+}
+  
+
+form {
+  font-family: 'VCR OSD Mono', monospace; /* match the font family */
+}
+
+form label {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 24px;
+  text-shadow:
+    0 0 10px #5c66eefb,
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  color: #639daf;
+}
+
+form input, form textarea, form select {
+  font-family: 'VCR OSD Mono', monospace; /* match the font family */
+  font-size: 16px; /* adjust the font size */
+  text-shadow:
+    0 0 10px #5c66eefb, /* white glow */
+    0 0 20px #69aaff, /* pink neon */
+    0 0 30px #371fc2; /* pink neon */
+  color: #639daf; /* dark background color */
+  background-color: #4d4d4d46; /* match the header background color */
+  border: 1px solid #639daf; /* dark background color */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+  box-shadow:
+    0 0 10px #5c66eefb, /* white glow */
+    0 0 20px #69aaff, /* pink neon */
+    0 0 30px #371fc2; /* pink neon */
+  border-color: #639daf; /* dark background color */
+}
+
+form button, form input[type="submit"] {
+  font-family: 'VCR OSD Mono', monospace; /* match the font family */
+  font-size: 16px; /* adjust the font size */
+  text-shadow:
+    0 0 10px #5c66eefb, /* white glow */
+    0 0 20px #69aaff, /* pink neon */
+    0 0 30px #371fc2; /* pink neon */
+  color: #639daf; /* dark background color */
+  background-color: #4d4d4d00; /* match the header background color */
+  border: 1px solid #639daf;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer; /* change the cursor to a pointer on hover */
+}
+
+form button:hover, form input[type="submit"]:hover {
+  text-shadow:
+  0 0 10px #68ee5cfb, /* white glow */
+  0 0 20px #69ff71, /* pink neon */
+  0 0 30px #3ac21f; /* pink neon */
+  color: #639daf; /* dark background color */
+  cursor: pointer;
+  background-color:#4d4d4d46; /* change the background color on hover */
+}
+
+
+
+.folderDetail {
+  font-family: 'VCR OSD Mono', monospace;
+  text-align: center;
+  padding: 20px;
+  background-color: #33333300;
+  border: 1px solid #639daf;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.folderDetail h2 {
+  font-size: 48px;
+  text-shadow:
+    0 0 10px hsla(236, 81%, 65%, 0.984),
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  color: #639daf;
+  margin-top: 0;
+  text-align: center;
+}
+.folderDetail h3 {
+  font-size: 16px;
+  text-shadow:
+    0 0 10px hsla(0, 81%, 65%, 0.984),
+    0 0 20px #f34242,
+    0 0 30px #7a0d0d;
+  color: #639daf;
+  margin-top: 0;
+  text-align: center;
+}
+
+.folderDetail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #4d4d4d46;
+  border-radius: 10px;
+}
+
+.folderDetail li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #639daf;
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5c66eefb,
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  color: #639daf;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.folderDetail li:last-child {
+  border-bottom: none;
+}
+
+.folderDetail a {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5c66eefb,
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  color: #639daf;
+  text-decoration: none;
+}
+
+.folderDetail a:hover {
+  text-shadow:
+  0 0 10px #eedf5cfb, /* white glow */
+  0 0 20px #f1d012, /* pink neon */
+  0 0 30px #a88f00; /* pink neon */
+  color: #639daf;
+}
+
+.folderDetail button[type="submit"] {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5c66eefb,
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  color: #639daf;
+  background-color: #4d4d4d46;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.folderDetail button[type="submit"]:hover {
+  text-shadow:
+  0 0 10px #68ee5cfb, /* white glow */
+  0 0 20px #69ff71, /* pink neon */
+  0 0 30px #3ac21f; /* pink neon */
+  color: #639daf; /* dark background color */
+  cursor: pointer;
+  background-color:#4d4d4d46;
+}
+
+.folderDetail input[type="file"] {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 16px;
+  text-shadow:
+    0 0 10px #5c66eefb,
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  color: #639daf;
+  background-color: #4d4d4d46;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.folderDetail input[type="file"]:focus {
+  box-shadow:
+    0 0 10px #5c66eefb,
+    0 0 20px #69aaff,
+    0 0 30px #371fc2;
+  border-color: #639daf;
+}
+
+
+
+
+
+  /* Responsive Design */
+  
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    nav li {
+      margin-right: 0;
+    }
+   .drive-dashboard {
+      margin: 20px;
+      padding: 10px;
+    }
+  }
